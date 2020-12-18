@@ -59,3 +59,15 @@ exports.update = (req,res) => {
         }
     });
 }
+
+exports.destroy = (req,res) =>{
+    let id = req.params.id
+
+    connection.query('DELETE FROM users WHERE id=?',[id],(error,rows,fields) => {
+        if (error) {
+            console.log(error);
+        }else{
+            response.ok(rows,res);
+        }
+    });
+}
