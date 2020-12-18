@@ -1,9 +1,11 @@
 'use strict';
 
 module.exports = (app) => {
-    let mycontroller = require('./controller');
+    let homeController = require('./homecontroller');
+    let usersController = require('./userscontroller');
 
-    app.route('/').get(mycontroller.index);
-    app.route('/users').get(mycontroller.allusers);
+    app.route('/').get(homeController.index);
+    app.route('/users').get(usersController.index);
+    app.route('/users/:id').get(usersController.show);
 }
 
