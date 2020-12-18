@@ -37,7 +37,7 @@ exports.store = (req,res) => {
         if (error) {
             console.log(error);
         }else{
-            response.ok(rows,res);
+            response.ok('users data inserted successfully',res);
         }
     });
 }
@@ -55,7 +55,7 @@ exports.update = (req,res) => {
         if (error) {
             console.log(error);
         }else{
-            response.ok(rows,res);
+            response.ok(`users data witdh id:${id} updated successfully`,res);
         }
     });
 }
@@ -67,7 +67,7 @@ exports.destroy = (req,res) =>{
         if (error) {
             console.log(error);
         }else{
-            response.ok(rows,res);
+            response.ok(`users data with id: ${id} deleted successfully`,res);
         }
     });
 }
