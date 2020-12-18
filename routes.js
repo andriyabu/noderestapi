@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (app) => {
-    let myjson = require('./controller');
+    let mycontroller = require('./controller');
 
-    app.route('/').get(myjson.index);
+    app.route('/').get(mycontroller.index);
 }

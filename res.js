@@ -1,5 +1,6 @@
 'use strict'
 
+// function ok with values and response
 exports.ok = (values,res) => {
     let data = {
         'status': 200,
